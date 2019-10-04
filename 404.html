@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+	  <link rel="stylesheet" href="//unpkg.com/docsify/themes/vue.css">
+	<link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
+	<link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/buble.css">
+
+</head>
+<body>
+	<nav>
+	  <a href="/docsify/">En</a>
+	  <a href="/docsify/zh-cn">中文</a>
+	</nav>
+  <div id="app"></div>
+</body>
+<script src="//unpkg.com/docsify" data-repo="your/repo"></script>
+<script src="//unpkg.com/docsify" data-max-level="6"></script>
+<script src="//unpkg.com/docsify" data-el="#app"></script>
+<script src="//unpkg.com/docsify" data-sidebar-toggle></script>
+<script>
+  window.sidebar = [
+    { slug: '/', title: 'Home' },
+    {
+      slug: '/pageA',
+      title: 'page A',
+      children: [
+        { slug: '/pageA/childrenB', title: 'children B' }
+      ]
+    },
+    { slug: '/PageC', title: 'Page C' }
+  ]
+</script>
+<script src="/lib/docsify.js" data-sidebar="sidebar"></script>
+<script src="/lib/docsify.js" data-load-sidebar></script>
+<script src="/lib/docsify.js" data-load-sidebar="_sidebar.md"></script>
+<script src="/lib/docsify.js" data-load-navbar="_navbar.md"></script>
+</html>
